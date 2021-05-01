@@ -1,3 +1,5 @@
+const inquirer = require("inquirer");
+
 const questions = [
   {
     type: "input",
@@ -30,3 +32,11 @@ const questions = [
     name: "linkedinUrl",
   },
 ];
+
+const init = async () => {
+  const answers = await inquirer.prompt(questions);
+
+  console.log(answers);
+};
+
+init();
