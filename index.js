@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+const createFile = require("./createFile");
 const generatePortfolio = require("./portfolioGenerator");
 
 const questions = [
@@ -39,7 +40,7 @@ const init = async () => {
 
   const generatedPortfolioPage = generatePortfolio(answers);
 
-  console.log(generatedPortfolioPage);
+  createFile(generatedPortfolioPage);
 };
 
 init();
