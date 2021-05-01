@@ -1,4 +1,13 @@
 const generatePortfolio = (answers) => {
+  const {
+    fullName,
+    description,
+    city,
+    country,
+    githubUrl,
+    linkedinUrl,
+  } = answers;
+
   return `<!DOCTYPE html>
     <html lang="en">
       <head>
@@ -11,29 +20,26 @@ const generatePortfolio = (answers) => {
           integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
           crossorigin="anonymous"
         />
-        <title>Suraj Verma | Portfolio</title>
+        <title>${fullName} | Portfolio</title>
       </head>
       <body>
         <div class="container">
           <header class="text-center my-4">
-            <h1>Suraj Verma</h1>
+            <h1>${fullName}</h1>
             <div class="p-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
-              consequuntur unde illum dignissimos tempora vero. Nulla, ab. Vero
-              omnis molestiae, consequuntur est, eligendi tempore magnam quasi quam
-              nulla unde eum.
+              ${description}
             </div>
           </header>
           <main class="d-flex justify-content-center">
             <div class="card" style="width: 18rem">
               <div class="card-body">
-                <h5 class="card-title">Suraj Verma</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Manchester, UK</h6>
-                <a href="https://github.com/surajverma2587" class="card-link"
+                <h5 class="card-title">${fullName}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">${city}, ${country}</h6>
+                <a href="${githubUrl}" class="card-link"
                   >GitHub</a
                 >
                 <a
-                  href="https://www.linkedin.com/in/surajverma25/"
+                  href="${linkedinUrl}"
                   class="card-link"
                   >LinkedIn</a
                 >
